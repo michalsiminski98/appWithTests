@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hide-button',
   templateUrl: './hide-button.component.html',
   styleUrls: ['./hide-button.component.css']
 })
-export class HideButtonComponent implements OnInit {
+export class HideButtonComponent {
+
+  @Output() showForm = new EventEmitter<void>();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -9,5 +9,11 @@ export class AppComponent {
   titleForBest: string = "Best Quote:"
   titleForList: string = "Quotes list:";
   titleForWorst: string = "Worst Quotes:";
+
+  showForm = false;
+
+  onShowForm(){
+    this.showForm = !this.showForm;
+  }
 }
 
