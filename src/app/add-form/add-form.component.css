@@ -1,0 +1,33 @@
+nav{
+  --formHeight: 70px;
+  width: 100vw;
+  height: var(--formHeight);
+  line-height: var(--formHeight);
+  background-color: rgb(136, 136, 136);
+}
+form{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+label{
+  font-size: 19px;
+}
+input{
+  padding: 2px 4px;
+  font-size: 19px;
+}
+
+.inputButton{
+  padding: 2px 8px;
+  transform: translateX(8px);
+  font-size: 19px;
+  background-color: transparent;
+  border: 2px solid rgb(0, 0, 0);
+  cursor: pointer;
+  transition: .2s;
+}
+.inputButton:hover{
+  background-color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
+}

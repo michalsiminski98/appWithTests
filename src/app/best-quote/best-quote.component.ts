@@ -10,7 +10,7 @@ import { QuotesService } from '../services/quotes/quotes.service';
 })
 export class BestQuoteComponent implements OnInit {
 
-  @Input() bestQuoteTitle?: string;
+  @Input() title?: string;
   bestQuote$?: Observable<Quote>;
 
   constructor(private quotesService: QuotesService) { }
