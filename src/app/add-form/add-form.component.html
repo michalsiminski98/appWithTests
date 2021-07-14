@@ -1,1 +1,13 @@
-<p>add-form works!</p>
+<nav>
+  <form>
+    <label for="author">
+      Author:
+      <input type="text" name="author" [(ngModel)]="author">
+    </label>
+    <label for="quotation">
+      Quote:
+      <input type="text" name="quotation" [(ngModel)]="quotation">
+    </label>
+    <input class="inputButton" type="button" value="Add" (click) = "createQuote(author, quotation)">
+  </form>
+</nav>

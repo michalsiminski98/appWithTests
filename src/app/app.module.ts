@@ -7,6 +7,7 @@ import { AddFormComponent } from './add-form/add-form.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
 import { BestQuoteComponent } from './best-quote/best-quote.component';
 import { WorstListComponent } from './worst-list/worst-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WorstListComponent } from './worst-list/worst-list.component';
     WorstListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
