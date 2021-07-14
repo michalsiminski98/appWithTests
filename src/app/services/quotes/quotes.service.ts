@@ -6,7 +6,7 @@ import { QUOTES } from 'src/app/mocks/mock-quotes';
 @Injectable({
   providedIn: 'root'
 })
-export class CardsService {
+export class QuotesService {
 
   private quotes: Quote[] = QUOTES.map(quote => ({...quote}));
   

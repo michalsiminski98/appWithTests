@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'appToMerge';
+  titleForBest: string = "Best Quote:"
+  titleForList: string = "Quotes list:";
+  titleForWorst: string = "Worst Quotes:";
 }
+
