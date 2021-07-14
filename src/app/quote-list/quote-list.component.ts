@@ -19,8 +19,12 @@ export class QuoteListComponent implements OnInit {
     this.quotes$ = this.quotesService.quotes$;
   }
 
-  addRate(rate: number, id: number): void{
-    this.quotesService.addRate(rate, id);
+  addingRate(id: number): void{
+    this.quotesService.addingRate(id);
+  }
+
+  subtractingRate(id: number): void{
+    this.quotesService.subtractingRate(id);
   }
 
 }

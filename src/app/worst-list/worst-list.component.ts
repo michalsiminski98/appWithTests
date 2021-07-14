@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Quote } from '../interfaces/quote';
 import { QuotesService } from '../services/quotes/quotes.service';
@@ -8,15 +8,10 @@ import { QuotesService } from '../services/quotes/quotes.service';
   templateUrl: './worst-list.component.html',
   styleUrls: ['./worst-list.component.css']
 })
-export class WorstListComponent implements OnInit {
+export class WorstListComponent {
 
-  worstQuotes$?: Observable<Quote[]>;
+  worstQuotes$: Observable<Quote[]> = this.quotesService.worstQuotes$;
   @Input() title: string = '';
 
   constructor(private quotesService: QuotesService) { }
-
-  ngOnInit(): void {
-    this.worstQuotes$ = this.quotesService.worstQuotes$;
-  }
-
 }

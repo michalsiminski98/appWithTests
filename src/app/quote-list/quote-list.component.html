@@ -1,10 +1,10 @@
 <ng-container *ngIf="quotes$ | async as quotes">
   <h2>{{title}}</h2>
   <ul>
-    <li *ngFor="let quote of quotes" [ngClass]="quote.rate < 0 ? 'badQuote' : ''">
+    <li *ngFor="let quote of quotes" [class.badQuote]="quote.rate < 0">
       {{quote.quotation}} <br>
       <strong>{{quote.author}}</strong> <br>
-      {{quote.rate}} <button class="negative" (click)="addRate(-1, quote.id)">-</button> <button (click)="addRate(1, quote.id)">+</button>
+      {{quote.rate}} <button class="negative" (click)="subtractingRate(quote.id)">-</button> <button (click)="addingRate(quote.id)">+</button>
     </li>
   </ul>
 </ng-container>
