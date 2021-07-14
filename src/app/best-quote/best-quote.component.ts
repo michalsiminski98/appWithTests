@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Quote } from '../interfaces/quote';
+import { QuotesService } from '../services/quotes/quotes.service';
 
 @Component({
   selector: 'app-best-quote',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestQuoteComponent implements OnInit {
 
-  constructor() { }
+  @Input() bestQuoteTitle?: string;
+  bestQuote$?: Observable<Quote>;
+
+  constructor(private quotesService: QuotesService) { }
 
   ngOnInit(): void {
-  }
+    this.bestQuote$ = this.quotesService.bestQuote$;
+    
 
+  }
 }
+

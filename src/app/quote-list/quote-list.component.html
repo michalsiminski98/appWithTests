@@ -1,1 +1,10 @@
-<p>quote-list works!</p>
+<ng-container *ngIf="quotes$ | async as quotes">
+  <h2>{{title}}</h2>
+  <ul>
+    <li *ngFor="let quote of quotes" [ngClass]="quote.rate < 0 ? 'badQuote' : ''">
+      {{quote.quotation}} <br>
+      <strong>{{quote.author}}</strong> <br>
+      {{quote.rate}} <button class="negative" (click)="addRate(-1, quote.id)">-</button> <button (click)="addRate(1, quote.id)">+</button>
+    </li>
+  </ul>
+</ng-container>

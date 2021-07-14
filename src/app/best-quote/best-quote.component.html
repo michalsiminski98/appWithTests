@@ -1,1 +1,6 @@
-<p>best-quote works!</p>
+<ng-container *ngIf="bestQuote$ | async as bestQuote">
+  <h2>{{bestQuoteTitle}}</h2>
+<h3>{{bestQuote.author}}</h3>
+<p>{{bestQuote.quotation}}</p>
+<span>{{bestQuote.rate}}</span>
+</ng-container>
