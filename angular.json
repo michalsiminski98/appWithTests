@@ -81,9 +81,21 @@
           "options": {
             "browserTarget": "appToMerge:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "appToMerge"
+  "defaultProject": "appToMerge",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

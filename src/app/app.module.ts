@@ -7,7 +7,7 @@ import { AddFormComponent } from './add-form/add-form.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
 import { BestQuoteComponent } from './best-quote/best-quote.component';
 import { WorstListComponent } from './worst-list/worst-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuoteComponent } from './best-quote/quote/quote.component';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { QuoteComponent } from './best-quote/quote/quote.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

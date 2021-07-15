@@ -1,13 +1,14 @@
 <nav>
-  <form>
+  <form [formGroup]="quoteForm" (ngSubmit)="createQuote(quoteForm.value.author, quoteForm.value.quotation)">
     <label for="author">
       Author:
-      <input type="text" name="author" [(ngModel)]="author">
+      <input type="text" name="author" formControlName="author">
     </label>
     <label for="quotation">
       Quote:
-      <input type="text" name="quotation" [(ngModel)]="quotation">
+      <input type="text" name="quotation" formControlName="quotation">
     </label>
-    <input class="inputButton" type="button" value="Add" (click) = "createQuote(author, quotation)">
+    <button class="inputButton" type="submit" [disabled]="!quoteForm.valid"></button>
+    <p>{{quoteForm.value.author}} adda das das ads </p>
   </form>
 </nav>
