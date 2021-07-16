@@ -12,7 +12,6 @@ export class QuoteListComponent {
 
   @Input() title?: string;
   quotes$: Observable<Quote[]> = this.quotesService.quotes$;
-  quotes = this.quotes$.subscribe();
 
   constructor(private quotesService: QuotesService) { }
 
