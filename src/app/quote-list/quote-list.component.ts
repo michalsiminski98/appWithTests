@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Quote } from '../interfaces/quote';
 import { QuotesService } from '../services/quotes/quotes.service';
@@ -8,16 +8,12 @@ import { QuotesService } from '../services/quotes/quotes.service';
   templateUrl: './quote-list.component.html',
   styleUrls: ['./quote-list.component.css']
 })
-export class QuoteListComponent implements OnInit {
+export class QuoteListComponent {
 
   @Input() title?: string;
-  quotes$?: Observable<Quote[]>;
+  quotes$: Observable<Quote[]> = this.quotesService.quotes$;
 
   constructor(private quotesService: QuotesService) { }
-
-  ngOnInit(): void {
-    this.quotes$ = this.quotesService.quotes$;
-  }
 
   addingRate(id: number): void{
     this.quotesService.addingRate(id);
@@ -26,5 +22,4 @@ export class QuoteListComponent implements OnInit {
   subtractingRate(id: number): void{
     this.quotesService.subtractingRate(id);
   }
-
 }

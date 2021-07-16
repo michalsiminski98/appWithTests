@@ -10,10 +10,16 @@ export class AppComponent {
   titleForList: string = "Quotes list:";
   titleForWorst: string = "Worst Quotes:";
 
+  public isSubmitting: boolean = false;
+
   showForm = false;
 
-  onShowForm(){
+  onShowForm(): void{
     this.showForm = !this.showForm;
+  }
+
+  adding(a:number, b:number): number{
+    return a + b
   }
 }
 

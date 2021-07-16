@@ -21,8 +21,8 @@ export class QuotesService {
 
   // creating quote by form
   createQuote(author: string, quotation: string){
-    const isQuoteValid = author === "" || quotation === "";
-    if (isQuoteValid) return alert("Fill the forms!");
+    const isQuoteNotValid = author === "" || quotation === "";
+    if (isQuoteNotValid) return alert("Fill the forms!");
     // creating new Quote with data from form
     const newQuote: Quote = {
       id: Math.floor(Math.random() * 99999),
