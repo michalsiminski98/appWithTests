@@ -7,7 +7,6 @@ import { QUOTES } from 'src/app/mocks/mock-quotes';
   providedIn: 'root'
 })
 export class QuotesService {
-
   private quotes: Quote[] = QUOTES.map(quote => ({...quote}));
 
   private _quotes = new BehaviorSubject<Quote[]>(this.quotes);
