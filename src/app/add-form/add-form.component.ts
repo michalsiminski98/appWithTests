@@ -12,11 +12,13 @@ export class AddFormComponent {
   quoteForm = this.fb.group({
     author: ['', Validators.required],
     quotation: ['', Validators.compose([Validators.minLength(5),Validators.maxLength(200)])]
-  })
+  });
 
   constructor(private quotesService: QuotesService, private fb: FormBuilder) { }
 
   createQuote(author: string, quotation: string): void{
+    const isQuoteNotValid = author === "" || quotation === "";
+    if (isQuoteNotValid) return alert("Fill the forms!");
     this.quotesService.createQuote(author, quotation);
   }
 }

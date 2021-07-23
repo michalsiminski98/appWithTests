@@ -63,6 +63,10 @@
         "tsConfig": "<rootDir>/tsconfig.spec.json",
         "stringifyContentPathRegex": "\\.html$"
       }
-    }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "."
+    ]
   }
 }

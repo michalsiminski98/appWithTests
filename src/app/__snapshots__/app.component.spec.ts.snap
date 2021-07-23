@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should match snapshot 1`] = `
+<ng-component>
+  <app-root>
+    <app-add-form />
+    <app-hide-button>
+      SHOW / HIDE
+    </app-hide-button>
+    <app-best-quote />
+    <app-quote-list />
+    <app-worst-list />
+  </app-root>
+</ng-component>
+`;

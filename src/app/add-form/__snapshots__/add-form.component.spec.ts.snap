@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddFormComponent should match snapshot 1`] = `
+<ng-component>
+  <app-add-form>
+    <nav>
+      <form
+        class="ng-untouched ng-pristine ng-invalid"
+        novalidate=""
+      >
+        <label
+          for="author"
+        >
+           Author: 
+          <input
+            class="ng-untouched ng-pristine ng-invalid"
+            data-test="author-input"
+            formcontrolname="author"
+            name="author"
+            type="text"
+          />
+        </label>
+        <label
+          for="quotation"
+        >
+           Quote: 
+          <input
+            class="ng-untouched ng-pristine ng-valid"
+            data-test="quotation-input"
+            formcontrolname="quotation"
+            name="quotation"
+            type="text"
+          />
+        </label>
+        <button
+          class="inputButton"
+          data-test="create-button"
+          type="submit"
+        />
+        <p>
+           adda das das ads 
+        </p>
+      </form>
+    </nav>
+  </app-add-form>
+</ng-component>
+`;

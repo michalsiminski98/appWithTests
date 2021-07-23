@@ -8,7 +8,7 @@ import { QuotesService } from '../services/quotes/quotes.service';
   templateUrl: './quote-list.component.html',
   styleUrls: ['./quote-list.component.css']
 })
-export class QuoteListComponent {
+export class QuoteListComponent{
 
   @Input() title?: string;
   quotes$: Observable<Quote[]> = this.quotesService.quotes$;
